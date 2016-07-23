@@ -1,6 +1,7 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (setq inhibit-startup-message t)
+(setq line-number-mode t)
 (setq column-number-mode t)
 (set-face-attribute 'default nil :height 80)
 
