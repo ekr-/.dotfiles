@@ -3,7 +3,13 @@
 (setq inhibit-startup-message t)
 (setq line-number-mode t)
 (setq column-number-mode t)
+
 (set-face-attribute 'default nil :height 80)
+
+;;
+;; solarized theme
+;;
+;; (load-theme 'solarized-light t)
 
 ;; fix path
 (setenv "PATH" (concat (getenv "PATH") ":/home/ekr/local/bin/"))
@@ -37,7 +43,14 @@
      (c++-mode . "linux")
      (java-mode . "java")
      (awk-mode . "awk")
-     (other . "gnu")))))
+     (other . "gnu"))))
+ '(custom-safe-themes
+   (quote
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(package-selected-packages
+   (quote
+    (forth-mode auto-complete-clang evil sr-speedbar solarized-theme magit haskell-mode haskell-emacs)))
+ '(safe-local-variable-values (quote ((c-noise-macro-names "UNINIT")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
