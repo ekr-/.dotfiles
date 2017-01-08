@@ -4,10 +4,15 @@
 (setq line-number-mode t)
 (setq column-number-mode t)
 (set-face-attribute 'default nil :height 80)
+(setq-default indent-tabs-mode nil)
 
 ;; fix path
 (setenv "PATH" (concat (getenv "PATH") ":/home/ekr/local/bin/"))
 (setq exec-path (append exec-path '("/home/ekr/local/bin/")))
+
+;; gnu mode is ugly
+(setq c-default-style "linux"
+      c-basic-offset 4)
 
 ;;(require 'ggtags)
 
@@ -18,10 +23,10 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 
-(add-hook 'c-mode-common-hook
-          (lambda ()
-            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
-              (ggtags-mode 1))))
+;; (add-hook 'c-mode-common-hook
+;;          (lambda ()
+;;            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+;;              (ggtags-mode 1))))
 
 
 ;;(ggtags-mode 1)
@@ -33,8 +38,8 @@
  '(c-basic-offset 4)
  '(c-default-style
    (quote
-    ((c-mode . "bsd")
-     (c++-mode . "linux")
+    ((c-mode . "linux")
+     (c++-mode . "bsd")
      (java-mode . "java")
      (awk-mode . "awk")
      (other . "gnu")))))
