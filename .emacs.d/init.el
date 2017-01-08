@@ -3,7 +3,13 @@
 (setq inhibit-startup-message t)
 (setq line-number-mode t)
 (setq column-number-mode t)
+(setq-default indent-tabs-mode nil)
+(setq tab-width 4)
 
+(setq package-enable-at-startup nil)
+(package-initialize)
+
+(load-theme 'zenburn t)
 (set-face-attribute 'default nil :height 80)
 
 ;;
@@ -46,10 +52,10 @@
      (other . "gnu"))))
  '(custom-safe-themes
    (quote
-    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+    ("14f0fbf6f7851bfa60bf1f30347003e2348bf7a1005570fd758133c87dafe08f" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(package-selected-packages
    (quote
-    (forth-mode auto-complete-clang evil sr-speedbar solarized-theme magit haskell-mode haskell-emacs)))
+    (php-mode php+-mode zenburn-theme forth-mode auto-complete-clang evil sr-speedbar solarized-theme magit haskell-mode haskell-emacs)))
  '(safe-local-variable-values (quote ((c-noise-macro-names "UNINIT")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
